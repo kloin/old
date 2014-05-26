@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/StoryBoardHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#FF3223"
+        android:padding="10dp" >
+
+        <ImageButton
+            android:id="@+id/addButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.79"
+            android:background="#00FFFFFF"
+            android:scaleType="fitStart"
+            android:src="@drawable/ic_action_settings" />
+
+        <!-- Toggle button to choose what we are adding -->
+
+        <ToggleButton
+            android:id="@+id/trailAndCrumbToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.50"
+            android:text="ToggleButton"
+            android:textOff="Trail"
+            android:textOn="Crumb" />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:text=">" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.01"
+            android:background="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- Layout for TRAILS -->
+
+    <LinearLayout
+        android:id="@+id/addTrailView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/StoryBoardHeader"
+            android:background="#FF0000FF" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="54dp"
+            android:gravity="center"
+            android:text="- new trail -"
+            android:textSize="18pt" />
+
+        <View
+            android:id="@+id/View01"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="#FF0000FF" />
+
+        <EditText
+            android:id="@+id/trailName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:hint="enter a name for your trail.."
+            android:textStyle="italic" >
+        </EditText>
+
+        <Button
+            android:id="@+id/friends"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:hint="tag some friends"
+            android:textStyle="italic" >
+        </Button>
+    </LinearLayout>
+
+    <!-- Layout for CRUMBS -->
+
+    <LinearLayout
+        android:id="@+id/addCrumbLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.03"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/StoryBoardHeader"
+            android:background="#FF0000FF" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="54dp"
+            android:gravity="center"
+            android:text="- new crumb -"
+            android:textSize="18pt" />
+
+        <View
+            android:id="@+id/View01"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="#FF0000FF" />
+
+        <Spinner
+            android:id="@+id/trailSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="#CCC"
+            android:gravity="center"
+            android:hint="select a trail to add to.."
+            android:textAlignment="center"
+            android:textStyle="italic" >
+        </Spinner>
+
+        <EditText
+            android:id="@+id/crumbTitle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:hint="enter a title for your crumb.."
+            android:textStyle="italic" >
+        </EditText>
+
+        <ImageView
+            android:id="@+id/media"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="0.55"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:hint="touch to add media.."
+            android:textStyle="italic" >
+
+        </ImageView>
+	<!-- Need to toggle this button on construction -->
+        <Button
+            android:id="@+id/addMedia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.02"
+            android:text="Add Media" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/createTrail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#CCC"
+        android:text="create." />
+
+</LinearLayout>
